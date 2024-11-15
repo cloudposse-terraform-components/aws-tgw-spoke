@@ -2,6 +2,6 @@
 _extends: .github
 repository:
   name: aws-tgw-spoke
-  description: This component is responsible for provisioning [AWS Transit Gateway](https://aws
+  description: This component is responsible for provisioning AWS Transit Gateway attachments to connect VPCs in a spoke account to different accounts through a central hub
   homepage: https://cloudposse.com/accelerate
   topics: terraform, terraform-component
