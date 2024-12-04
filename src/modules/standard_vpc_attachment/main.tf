@@ -118,7 +118,7 @@ locals {
 # This includes a merged list of all CIDRs from allowed VPCs in connected accounts
 module "standard_vpc_attachment" {
   source  = "cloudposse/transit-gateway/aws"
-  version = "0.11.0"
+  version = "0.11.3"
 
   existing_transit_gateway_id             = var.tgw_config.existing_transit_gateway_id
   existing_transit_gateway_route_table_id = var.tgw_config.existing_transit_gateway_route_table_id
