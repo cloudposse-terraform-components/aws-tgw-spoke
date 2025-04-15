@@ -1,6 +1,6 @@
 module "tgw_hub" {
   source  = "cloudposse/stack-config/yaml//modules/remote-state"
-  version = "1.5.0"
+  version = "1.8.0"
 
   component = var.tgw_hub_component_name
   tenant    = length(var.tgw_hub_tenant_name) > 0 ? var.tgw_hub_tenant_name : module.this.tenant
@@ -11,7 +11,7 @@ module "tgw_hub" {
 
 module "vpc" {
   source  = "cloudposse/stack-config/yaml//modules/remote-state"
-  version = "1.5.0"
+  version = "1.8.0"
 
   component = var.own_vpc_component_name
 
@@ -20,7 +20,7 @@ module "vpc" {
 
 module "cross_region_hub_connector" {
   source  = "cloudposse/stack-config/yaml//modules/remote-state"
-  version = "1.5.0"
+  version = "1.8.0"
 
   for_each = var.cross_region_hub_connector_components
 

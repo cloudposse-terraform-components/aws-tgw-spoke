@@ -1,0 +1,15 @@
+components:
+  terraform:
+    tgw-spoke/disabled:
+      metadata:
+        component: tgw/spoke
+      vars:
+        enabled: false
+        name: tgw-spoke
+        tags:
+          Team: sre
+          Service: tgw-spoke
+        expose_eks_sg: false
+        tgw_hub_tenant_name: default
+        tgw_hub_stage_name: test
+        connections: []
