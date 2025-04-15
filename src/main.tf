@@ -16,6 +16,8 @@ module "tgw_hub_routes" {
   source  = "cloudposse/transit-gateway/aws"
   version = "0.10.0"
 
+  count = module.this.enabled ? 1 : 0
+
   providers = {
     aws = aws.tgw-hub
   }
@@ -29,7 +31,7 @@ module "tgw_hub_routes" {
   create_transit_gateway_route_table_association_and_propagation = true
 
   config = {
-    (local.spoke_account) = module.tgw_spoke_vpc_attachment.tg_config,
+    (local.spoke_account) = module.tgw_spoke_vpc_attachment[0].tg_config,
   }
 
   existing_transit_gateway_route_table_id = module.tgw_hub.outputs.transit_gateway_route_table_id
@@ -39,6 +41,8 @@ module "tgw_hub_routes" {
 
 module "tgw_spoke_vpc_attachment" {
   source = "./modules/standard_vpc_attachment"
+
+  count = module.this.enabled ? 1 : 0
 
   owning_account          = local.spoke_account
   own_vpc_component_name  = var.own_vpc_component_name
