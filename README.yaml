@@ -95,8 +95,8 @@ usage: |-
   <!-- prettier-ignore-end -->
 
 references:
-  - name: cloudposse/terraform-aws-components (tgw module)
-    url: https://github.com/cloudposse/terraform-aws-components/tree/main/modules/tgw
+  - name: cloudposse-terraform-components
+    url: https://github.com/orgs/cloudposse-terraform-components/repositories
     description: Cloud Posse's upstream component
 tags:
   - component/tgw/spoke
