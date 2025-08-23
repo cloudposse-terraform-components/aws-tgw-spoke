@@ -181,7 +181,7 @@ No outputs.
 ## References
 
 
-- [cloudposse/terraform-aws-components (tgw module)](https://github.com/cloudposse/terraform-aws-components/tree/main/modules/tgw) - Cloud Posse's upstream component
+- [cloudposse-terraform-components](https://github.com/orgs/cloudposse-terraform-components/repositories) - Cloud Posse's upstream component
 
 
 
