@@ -72,7 +72,7 @@ components:
           Service: tgw-spoke
         expose_eks_sg: false
         tgw_hub_tenant_name: core
-        tgw_hub_environment_name: ue1
+        tgw_hub_stage_name: network
 
     tgw/spoke:
       metadata:
@@ -86,9 +86,9 @@ components:
           - account:
               tenant: core
               stage: network
-            # Set this value if the vpc component has a different name in this account
-            vpc_component_names:
-              - vpc-dev
+              # Set this value if the vpc component has a different name in this account
+              vpc_component_names:
+                - vpc-dev
           - account:
               tenant: core
               stage: auto
@@ -226,7 +226,6 @@ atmos terraform apply tgw/spoke -s <tenant>-<environment>-<stage>
 ## Outputs
 
 No outputs.
-<!-- markdownlint-restore -->
 
 
 
