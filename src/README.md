@@ -9,7 +9,6 @@ tags:
 
 This component is responsible for provisioning [AWS Transit Gateway](https://aws.amazon.com/transit-gateway) attachments
 to connect VPCs in a `spoke` account to different accounts through a central `hub`.
-
 ## Usage
 
 **Stack Level**: Regional
@@ -97,7 +96,10 @@ atmos terraform apply tgw/spoke -s <tenant>-<environment>-<stage>
 ```
 
 <!-- prettier-ignore-start -->
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- prettier-ignore-end -->
+
+
+<!-- markdownlint-disable -->
 ## Requirements
 
 | Name | Version |
@@ -172,12 +174,17 @@ atmos terraform apply tgw/spoke -s <tenant>-<environment>-<stage>
 ## Outputs
 
 No outputs.
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-<!-- prettier-ignore-end -->
+<!-- markdownlint-restore -->
+
+
 
 ## References
 
-- [cloudposse/terraform-aws-components](https://github.com/cloudposse/terraform-aws-components/tree/main/modules/tgw) -
-  Cloud Posse's upstream component
+
+- [cloudposse-terraform-components](https://github.com/orgs/cloudposse-terraform-components/repositories) - Cloud Posse's upstream component
+
+
+
 
 [<img src="https://cloudposse.com/logo-300x69.svg" height="32" align="right"/>](https://cpco.io/homepage?utm_source=github&utm_medium=readme&utm_campaign=cloudposse-terraform-components/aws-tgw-spoke&utm_content=)
+
