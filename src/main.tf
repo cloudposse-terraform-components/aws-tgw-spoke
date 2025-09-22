@@ -14,7 +14,7 @@ locals {
 
 module "tgw_hub_routes" {
   source  = "cloudposse/transit-gateway/aws"
-  version = "0.12.0"
+  version = "0.13.0"
 
   count = module.this.enabled ? 1 : 0
 
